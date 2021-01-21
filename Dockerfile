@@ -49,6 +49,7 @@ RUN rm -rf $DOCKER_BUILD_HOME
 COPY entrypoint.sh /usr/local/bin/
 RUN chmod +x /usr/local/bin/entrypoint.sh
 
+# move files from local machine to custom directory outside “/home” in docker container
 RUN mkdir -p /drupal_prj/web/error
 COPY error /drupal_prj/web/error
 RUN ls /drupal_prj/web/error
