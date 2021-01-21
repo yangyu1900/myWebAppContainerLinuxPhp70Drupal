@@ -100,6 +100,10 @@ if [ "${DATABASE_TYPE}" == "local" ]; then
     setup_phpmyadmin
 fi
 
+# move files to persistent storage
+mkdir -p /home/drupal_prj/web/error
+cp -r /drupal_prj/web/error/* /home/drupal_prj/web/error
+
 # setup Drupal
 if test ! -e "$DRUPAL_HOME/sites/default/settings.php"; then
     echo "Installing Drupal ..."

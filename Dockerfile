@@ -49,9 +49,9 @@ RUN rm -rf $DOCKER_BUILD_HOME
 COPY entrypoint.sh /usr/local/bin/
 RUN chmod +x /usr/local/bin/entrypoint.sh
 
-RUN mkdir -p /home/drupal_prj/web/error
-COPY error /home/drupal_prj/web/error
-RUN ls /home/drupal_prj/web/error
+RUN mkdir -p /drupal_prj/web/error
+COPY error /drupal_prj/web/error
+RUN ls /drupal_prj/web/error
 
 EXPOSE 2222 80
 ENTRYPOINT ["entrypoint.sh"]
